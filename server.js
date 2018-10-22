@@ -11,13 +11,13 @@ var PORT = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, './app/pubilc')))
 
 // Add Middleware
-app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(bodyparser.json())
 
 // Add Routes
-require(path.join(__dirname, './app/routing/apiRoutes'))
-require(path.join(__dirname, './app/routing/htmlRoutes'))
+require(path.join(__dirname, './app/routing/apiRoutes'))(app)
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app)
+
 
 // Start Listening On PORT
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
