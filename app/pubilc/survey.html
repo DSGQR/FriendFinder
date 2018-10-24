@@ -52,7 +52,7 @@
                         <div class="input-field col s12">
                             <h3>Question 1</h3>
                             <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
-                            <select id="question1">
+                            <select class="chosen-select"id="question1">
                                 <option value="" disabled selected>Choose your option</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
@@ -208,12 +208,40 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-        
-    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elems = document.querySelectorAll('select')
+            var instances = M.FormSelect.init(elems)
+        })
+
+        document.querySelector('#submitButton').addEventListener('click', function() {
+            event.preventDefault();
+
+            var userInput = {
+                name: document.getElementById('#userName').val().trim(),
+                photo: document.getElementById('#userPhoto').val().trim(),
+                scores: [
+                    document.getElementById('#question1').val().trim(),
+                    document.getElementById('#question2').val().trim(),
+                    document.getElementById('#question3').val().trim(),
+                    document.getElementById('#question4').val().trim(),
+                    document.getElementById('#question5').val().trim(),
+                    document.getElementById('#question6').val().trim(),
+                    document.getElementById('#question7').val().trim(),
+                    document.getElementById('#question8').val().trim(),
+                    document.getElementById('#question9').val().trim(),
+                    document.getElementById('#question10').val().trim(),
+                ]
+            };
+
+            
+        })
+    </script>
+
+    
 </body>
 
 </html>

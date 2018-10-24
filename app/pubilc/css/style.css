@@ -42,6 +42,10 @@ main h2, h3 {
     background-color: #4788FC; 
   }
 
+.btn:hover {
+    background-color: red;
+}
+
 .mainpanel{
 	margin: 100px;
 }
