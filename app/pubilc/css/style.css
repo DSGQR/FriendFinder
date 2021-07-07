@@ -1,0 +1,63 @@
+body {
+   width: 95%;
+   margin: 0px auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+header {
+    height: 100px;
+}
+
+header > nav {
+    height: 100%;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+main h2, h3 {
+    font-weight: 230;
+}
+
+#logo-icon {
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+#logo {
+ 	margin-left: 50px;
+ 	margin-top: 20px;
+ }
+
+ #head-nav-links {
+ 	margin-right: 50px;
+ 	margin-top: 20px;
+ }
+
+.btn { 
+    background-color: #4788FC; 
+  }
+
+.btn:hover {
+    background-color: red;
+}
+
+.mainpanel{
+	margin: 100px;
+}
+
+.mainContainer {
+    width: 80%;
+}
+
+ #mainpanel-content {
+ 	margin: 50px;
+ }
+
+ .mContent {
+     flex: 1 0 auto;
+ }
